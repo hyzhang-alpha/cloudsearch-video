@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - VideoConnector",
+            "request": "launch",
+            "mainClass": "info.alphanext.cloudsearch.VideoConnector",
+            "projectName": "video-search"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-App<video-search>",
+            "request": "launch",
+            "mainClass": "info.alphanext.cloudsearch.App",
+            "projectName": "video-search"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-VideoParser<video-search>",
+            "request": "launch",
+            "mainClass": "info.alphanext.cloudsearch.VideoParser",
+            "projectName": "video-search",
+            "args": [
+                "speech-transcription",
+                "gs://gcsvideo/car_visor.mp4#1587203122483031"
+            ]
+        }
+    ]
+}
