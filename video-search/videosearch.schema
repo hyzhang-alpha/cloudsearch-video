@@ -1,0 +1,87 @@
+{
+    "objectDefinitions": [
+      {
+        "name": "videoObject",
+        "options": {
+          "displayOptions": {
+            "objectDisplayLabel": "Google Cloud Storage",
+            "metalines": [
+              {
+                "properties": [
+                  
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "propertyName": "videoLabel"
+                  },
+                  {
+                    "propertyName": "videoCategory"
+                  }
+                ]
+              },
+              {
+                "properties": [
+                  {
+                    "propertyName": "videoLanguage"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "propertyDefinitions": [
+          {
+            "name": "videoLabel",
+            "isReturnable": true,
+            "isFacetable": true,
+            "textPropertyOptions": {
+              "retrievalImportance": {
+                "importance": "HIGHEST"
+              },
+              "operatorOptions": {
+                "operatorName": "label"
+              }
+            },
+            "displayOptions": {
+              "displayLabel": "Video Label"
+            }
+          },
+          {
+            "name": "videoCategory",
+            "isReturnable": true,
+            "isFacetable": true,
+            "textPropertyOptions": {
+              "retrievalImportance": {
+                "importance": "HIGHEST"
+              },
+              "operatorOptions": {
+                "operatorName": "catogory"
+              }
+            },
+            "displayOptions": {
+              "displayLabel": "Video Category"
+            }
+          },
+          {
+            "name": "videoLanguage",
+            "isReturnable": true,
+            "isFacetable": true,
+            "textPropertyOptions": {
+              "retrievalImportance": {
+                "importance": "HIGHEST"
+              },
+              "operatorOptions": {
+                "operatorName": "language"
+              }
+            },
+            "displayOptions": {
+              "displayLabel": "Video Language"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

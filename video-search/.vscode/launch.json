@@ -6,16 +6,33 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SchemaTool",
+            "request": "launch",
+            "mainClass": "info.alphanext.cloudsearch.SchemaTool",
+            "projectName": "video-search",
+            "args": "-Dconfig=.\\connector-config.properties"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - VideoConnector",
             "request": "launch",
             "mainClass": "info.alphanext.cloudsearch.VideoConnector",
-            "projectName": "video-search"
+            "projectName": "video-search",
+            "args": "-Dconfig=.\\connector-config.properties"
         },
         {
             "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-VideoConnector<video-search>",
+            "request": "launch",
+            "mainClass": "info.alphanext.cloudsearch.VideoConnector",
+            "projectName": "video-search",
+            "args": "-Dconfig=.\\connector-config.properties"
         },
         {
             "type": "java",

@@ -10,6 +10,7 @@ public class Video {
     
     private String videoTitle;
     private String videoURL;
+    private String videoPublicURL;
     private String videoLanguage;
 
     private List<videoTranscript> transcript = new LinkedList<>();
@@ -22,9 +23,24 @@ public class Video {
         
     }
 
+    public void setVideoPublicUrl(String url)
+    {
+        this.videoPublicURL = url;
+    }
+
+    public String getVideoPublicUrl()
+    {
+        return this.videoPublicURL;
+    }
+
     public void setVideoTitle(String title)
     {
         videoTitle = title;
+    }
+
+    public String getVideoTitle()
+    {
+        return this.videoTitle;
     }
 
     public void setVideoLanguage(String language)
@@ -32,9 +48,19 @@ public class Video {
         videoLanguage = language;
     }
 
+    public String getVideoLanguage()
+    {
+        return this.videoLanguage;
+    }
+
     public void setVideoURL(String url)
     {
         videoURL = url;
+    }
+
+    public String getVideoUrl()
+    {
+        return this.videoURL;
     }
 
     public void addVideoTranscript(videoTranscript transcriptEntry)
@@ -42,14 +68,44 @@ public class Video {
         transcript.add(transcriptEntry);
     }
 
+    public String getVideoTranscriptSting()
+    {
+        String transcriptionText = "";
+
+        for (videoTranscript videoTranscript : transcript) {
+            transcriptionText += videoTranscript.getTranscriptText();
+            transcriptionText += " ";
+        }
+
+        return transcriptionText;
+    }
+
     public void addVideoLabel(String label)
     {
         videoLabel.add(label);
     }
 
+    public List<String> getVideoLabelListUnique()
+    {
+        Set<String> uniqueLabelSet = new HashSet<String>(videoLabel);
+
+        List<String> uniqueLabelList = new ArrayList<>(uniqueLabelSet);
+
+        return uniqueLabelList;
+    }
+
     public void addVideoCategory(String category)
     {
         videoCategory.add(category);
+    }
+
+    public List<String> getVideoCategoryListUnique()
+    {
+        Set<String> uniqueVideoCatogorySet = new HashSet<String>(videoCategory);
+
+        List<String> uniqueVideoCategoryList = new ArrayList<>(uniqueVideoCatogorySet);
+
+        return uniqueVideoCategoryList;
     }
 
     public void printVideoTranscriptDetails()
